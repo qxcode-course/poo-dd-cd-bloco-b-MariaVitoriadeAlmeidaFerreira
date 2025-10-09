@@ -1,0 +1,17 @@
+remote: https://github.com/qxcodepoo/arcade/blob/master/Readme.md
+lang: py
+version: 0.0.1
+database: database
+expanded:
+- configuracao-e-aquecimento
+- campanha-principal
+- bloco_b-modificadores-de-acesso
+tasks: {}
+flags:
+  quests: 0
+  tracks: 0
+  tasks: 0
+  graph: 0
+  xray: 0
+index: camisa
+filter: []
