@@ -1,0 +1,27 @@
+2025-10-11 10:11:41, MOVE, v:1, k:chinela, mode:PICK
+2025-10-11 10:11:43, MOVE, v:1, k:chinela, mode:BACK
+2025-10-11 10:12:08, MOVE, v:1, k:chinela, mode:PICK
+2025-10-11 10:12:09, EXEC, v:1, k:chinela, mode:LOCK, rate:0, size:21
+2025-10-11 10:12:11, EXEC, v:1, k:chinela, mode:LOCK, rate:0
+2025-10-11 10:12:26, EXEC, v:1, k:chinela, mode:LOCK, rate:0, size:21
+2025-10-11 10:13:00, EXEC, v:1, k:chinela, mode:LOCK, rate:0, size:21
+2025-10-11 10:14:33, EXEC, v:1, k:chinela, mode:LOCK, rate:0, size:19
+2025-10-11 10:17:01, EXEC, v:1, k:chinela, mode:LOCK, rate:0
+2025-10-11 10:22:24, MOVE, v:1, k:chinela, mode:PICK
+2025-10-11 10:22:25, EXEC, v:1, k:chinela, mode:LOCK, rate:0, size:19
+2025-10-11 10:23:26, MOVE, v:1, k:chinela, mode:PICK
+2025-10-11 10:23:27, EXEC, v:1, k:chinela, mode:LOCK, rate:0, size:24
+2025-10-11 10:25:05, EXEC, v:1, k:chinela, mode:LOCK, rate:0, size:24
+2025-10-11 10:25:07, EXEC, v:1, k:chinela, mode:LOCK, rate:0
+2025-10-11 10:26:12, EXEC, v:1, k:chinela, mode:FREE
+2025-10-11 10:27:38, EXEC, v:1, k:chinela, mode:LOCK, rate:0
+2025-10-11 10:27:39, MOVE, v:1, k:chinela, mode:BACK
+2025-10-11 10:27:39, MOVE, v:1, k:chinela, mode:PICK
+2025-10-11 10:27:42, MOVE, v:1, k:chinela, mode:BACK
+2025-10-11 10:30:05, MOVE, v:1, k:camisa, mode:DOWN
+2025-10-11 10:30:08, MOVE, v:1, k:chinela, mode:PICK
+2025-10-11 10:30:09, EXEC, v:1, k:chinela, mode:LOCK, rate:0
+2025-10-11 10:30:10, EXEC, v:1, k:chinela, mode:LOCK, rate:0
+2025-10-11 10:31:06, EXEC, v:1, k:chinela, mode:LOCK, rate:0
+2025-10-11 10:31:06, EXEC, v:1, k:chinela, mode:LOCK, rate:0
+2025-10-11 10:31:07, MOVE, v:1, k:chinela, mode:BACK
