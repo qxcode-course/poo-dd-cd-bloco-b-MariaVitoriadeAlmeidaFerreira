@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-11_10-36-56",
+            "content": "class Camisa:\n    def __init__(self):\n        self.__tamanho = \"\"\n\n    def getTamanho(self)",
+            "lines": "5"
+        }
+    ]
+}

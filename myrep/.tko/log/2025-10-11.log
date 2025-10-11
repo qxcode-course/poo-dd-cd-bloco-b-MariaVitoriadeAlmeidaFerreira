@@ -25,3 +25,22 @@
 2025-10-11 10:31:06, EXEC, v:1, k:chinela, mode:LOCK, rate:0
 2025-10-11 10:31:06, EXEC, v:1, k:chinela, mode:LOCK, rate:0
 2025-10-11 10:31:07, MOVE, v:1, k:chinela, mode:BACK
+2025-10-11 10:32:22, MOVE, v:1, k:roupa, mode:DOWN
+2025-10-11 10:32:42, MOVE, v:1, k:roupa, mode:PICK
+2025-10-11 10:33:22, MOVE, v:1, k:roupa, mode:BACK
+2025-10-11 10:33:24, MOVE, v:1, k:chinela, mode:PICK
+2025-10-11 10:33:24, EXEC, v:1, k:chinela, mode:LOCK, rate:0
+2025-10-11 10:33:52, MOVE, v:1, k:chinela, mode:BACK
+2025-10-11 10:33:57, MOVE, v:1, k:roupa, mode:PICK
+2025-10-11 10:35:04, MOVE, v:1, k:roupa, mode:BACK
+2025-10-11 10:35:07, MOVE, v:1, k:roupa, mode:PICK
+2025-10-11 10:36:47, EXEC, v:1, k:roupa, mode:FULL, rate:0, size:0
+2025-10-11 10:36:50, EXEC, v:1, k:roupa, mode:FULL, rate:0
+2025-10-11 10:36:53, MOVE, v:1, k:roupa, mode:BACK
+2025-10-11 10:36:55, MOVE, v:1, k:camisa, mode:PICK
+2025-10-11 10:36:56, EXEC, v:1, k:camisa, mode:LOCK, rate:0, size:5
+2025-10-11 10:37:40, MOVE, v:1, k:camisa, mode:BACK
+2025-10-11 10:37:42, MOVE, v:1, k:chinela, mode:PICK
+2025-10-11 10:37:43, EXEC, v:1, k:chinela, mode:FREE
+2025-10-11 10:39:14, MOVE, v:1, k:chinela, mode:BACK
+2025-10-11 10:41:06, MOVE, v:1, k:camisa, mode:PICK
