@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-12_09-57-48",
+            "content": "@@ -3,13 +3,15 @@\n ass \n-Watch\n+Relogio\n :%0A  \n@@ -67,17 +67,17 @@\n , segund\n-o\n+s\n :int = 0\n@@ -154,22 +154,14 @@\n gund\n-o\n+s\n  = 0%0A\n-        \n %0A   \n@@ -241,229 +241,24 @@\n gund\n-o\n (segund\n-o)%0A%0A    def getMinute(self) -%3E int:%0A        return self.__minute%0A    %0A    def getHour(self) -%3E int:%0A        return self.__hour%0A    %0A    def getSegundo(self) -%3E int:%0A        return self.__segundo%0A    %0A    %0A        %0A%0A%0A\n+s)%0A%0A        \n %0A\n",
+            "lines": "11"
+        },
+        {
+            "label": "2025-10-12_10-18-57",
+            "content": "@@ -459,95 +459,17 @@\n     \n-def setHour(self, valor:int):%0A        if valor %3C 0 or valor %3E 23:%0A            print(%22fail%22)\n+%0A        %0A%0A%0A%0A\n",
+            "lines": "24"
+        },
+        {
+            "label": "2025-10-12_10-20-40",
+            "content": "class Watch:\n    def __init__(self, hour:int = 0, minute:int = 0, segundo:int = 0):\n        self.__hour = 0\n        self.__minute = 0\n        self.__segundo = 0\n        \n        self.setHour(hour)\n        self.setMinute(minute)\n        self.setSegundo(segundo)\n\n    def getMinute(self) -> int:\n        return self.__minute\n    \n    def getHour(self) -> int:\n        return self.__hour\n    \n    def getSegundo(self) -> int:\n        return self.__segundo\n    \n    def setHour(self, valor:int):\n        if valor < 0 or valor > 23:\n            print(\"fail\")",
+            "lines": "22"
+        }
+    ]
+}
