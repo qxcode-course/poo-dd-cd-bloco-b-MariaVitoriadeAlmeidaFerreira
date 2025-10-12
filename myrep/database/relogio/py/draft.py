@@ -43,7 +43,24 @@ class Watch:
 
 
 def main():
-watch = Watch
+    relogio = Watch(0, 0, 0)
+    while True:
+        line: str = input()
+        print("$" + line)
+        args: list[str] = line.split(" ")
+
+        if args[0] == "show":
+            print(relogio)
+        elif args[0] == "end":
+            break
+        elif args[0] == "init":
+            relogio = Watch(int(args[1]), int(args[2]), int(args[3])) 
+        elif args[0] == "set":
+            relogio.setHour(int(args[1]))
+            relogio.setMinute(int(args[2]))
+            relogio.setSegundo(int(args[3]))
+        else:
+            print("fail")
 
 
-
+main()

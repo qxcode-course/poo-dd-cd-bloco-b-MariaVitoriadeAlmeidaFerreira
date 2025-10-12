@@ -22,8 +22,38 @@
         },
         {
             "label": "2025-10-12_10-33-19",
-            "content": "class Watch:\n    def __init__(self, hour:int = 0, minute:int = 0, segundo:int = 0):\n        self.__hour = 0\n        self.__minute = 0\n        self.__segundo = 0\n        \n        self.setHour(hour)\n        self.setMinute(minute)\n        self.setSegundo(segundo)\n\n    def getMinute(self) -> int:\n        return self.__minute\n    \n    def getHour(self) -> int:\n        return self.__hour\n    \n    def getSegundo(self) -> int:\n        return self.__segundo\n    \n    def setHour(self, valor:int):\n        if valor < 0 or valor > 23:\n            print(\"fail: hora invalida\")\n            return\n        self.__hour = valor \n\n    def setMinute(self, valor: int):\n        if valor < 0 or valor > 59:\n            print(\"fail: minuto invalido\")\n            return\n        self.__minute = valor\n    \n    def setSegundo(self, valor: int):\n        if valor < 0 or valor > 59:\n            print(\"fail: segundo invalido\")\n            return \n        self.__segundo = valor\n\n    def __str__(self) -> str:\n        hour = self.getHour()\n        minute = self.getMinute()\n        segundo = self.getSegundo()\n        return f\"{hour:02}, {minute:02}, {segundo:02}\"\n\n\ndef main():\nwatch = Watch\n\n\n\n",
+            "content": "@@ -1154,121 +1154,21 @@\n ():%0A\n-    relogio = Watch(0, 0, 0)%0A    while True:%0A        line: str = input()%0A        print(%22$%22 + line)%0A        %0A%0A%0A%0Amain()\n+watch = Watch%0A%0A%0A%0A\n",
             "lines": "49"
+        },
+        {
+            "label": "2025-10-12_10-41-29",
+            "content": "@@ -1183,18 +1183,90 @@\n  0)%0A    \n-%0A%0A\n+while True:%0A        line: str = input()%0A        print(%22$%22 + line)%0A        \n %0A%0A%0A%0Amain\n",
+            "lines": "54"
+        },
+        {
+            "label": "2025-10-12_10-45-50",
+            "content": "@@ -1187,115 +1187,8 @@\n     \n-while True:%0A        line: str = input()%0A        print(%22$%22 + line)%0A        args: list%5Bstr%5D = line.split(%22 %22)\n %0A%0A%0A%0A\n",
+            "lines": "53"
+        },
+        {
+            "label": "2025-10-12_10-45-58",
+            "content": "@@ -1296,66 +1296,8 @@\n %22)%0A%0A\n-        if args%5B0%5D == %22show%22:%0A            print(relogio)%0A%0A\n %0A%0A%0A%0A\n",
+            "lines": "56"
+        },
+        {
+            "label": "2025-10-12_10-46-54",
+            "content": "@@ -1353,160 +1353,8 @@\n io)%0A\n-        elif args%5B0%5D == %22end%22:%0A            break%0A        elif args%5B0%5D == %22init%22:%0A            relogio = Watch(int(args%5B1%5D), int(args%5B2%5D), int(args%5B3%5D)) %0A\n %0A%0A%0A%0A\n",
+            "lines": "59"
+        },
+        {
+            "label": "2025-10-12_10-49-22",
+            "content": "@@ -1505,209 +1505,10 @@\n )) %0A\n-        elif args%5B0%5D == %22set%22:%0A            relogio.setHour(int(args%5B1%5D))%0A            relogio.setMinute(int(args%5B2%5D))%0A            relogio.setSegundo(int(args%5B3%5D))%0A        else:%0A            print(%22fail%22)\n+%0A%0A\n %0A%0A%0Am\n",
+            "lines": "63"
+        },
+        {
+            "label": "2025-10-12_10-52-28",
+            "content": "class Watch:\n    def __init__(self, hour:int = 0, minute:int = 0, segundo:int = 0):\n        self.__hour = 0\n        self.__minute = 0\n        self.__segundo = 0\n        \n        self.setHour(hour)\n        self.setMinute(minute)\n        self.setSegundo(segundo)\n\n    def getMinute(self) -> int:\n        return self.__minute\n    \n    def getHour(self) -> int:\n        return self.__hour\n    \n    def getSegundo(self) -> int:\n        return self.__segundo\n    \n    def setHour(self, valor:int):\n        if valor < 0 or valor > 23:\n            print(\"fail: hora invalida\")\n            return\n        self.__hour = valor \n\n    def setMinute(self, valor: int):\n        if valor < 0 or valor > 59:\n            print(\"fail: minuto invalido\")\n            return\n        self.__minute = valor\n    \n    def setSegundo(self, valor: int):\n        if valor < 0 or valor > 59:\n            print(\"fail: segundo invalido\")\n            return \n        self.__segundo = valor\n\n    def __str__(self) -> str:\n        hour = self.getHour()\n        minute = self.getMinute()\n        segundo = self.getSegundo()\n        return f\"{hour:02}, {minute:02}, {segundo:02}\"\n\n\ndef main():\n    relogio = Watch(0, 0, 0)\n    while True:\n        line: str = input()\n        print(\"$\" + line)\n        args: list[str] = line.split(\" \")\n\n        if args[0] == \"show\":\n            print(relogio)\n        elif args[0] == \"end\":\n            break\n        elif args[0] == \"init\":\n            relogio = Watch(int(args[1]), int(args[2]), int(args[3])) \n        elif args[0] == \"set\":\n            relogio.setHour(int(args[1]))\n            relogio.setMinute(int(args[2]))\n            relogio.setSegundo(int(args[3]))\n        else:\n            print(\"fail\")\n\n\nmain()",
+            "lines": "66"
         }
     ]
 }
