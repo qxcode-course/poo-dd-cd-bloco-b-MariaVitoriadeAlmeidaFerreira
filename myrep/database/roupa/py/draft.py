@@ -9,7 +9,7 @@ class Roupa:
         tamanhosValidos = ["PP", "P", "M", "G", "GG", "XG"]
 
         if valor not in tamanhosValidos:
-            print("fail tamanho invalido")
+            print("fail: Valor invalido, tente PP, P, M, G, GG ou XG")
             return
         
         self.__tamanho = valor
@@ -19,9 +19,15 @@ roupa = Roupa()
 while True:
     line = input()
     args: list[str] = line.split(" ")
-    print("$", line)
+    print(f"${line}")
 
     if args[0] == "end":
         break
     elif args[0] == "show":
         print(f"size: ({roupa.getTamanho()})") 
+    elif args[0] == "size":
+        roupa.setTamanho(args[1].upper())
+    else:
+        print("fail: comando")
+    
+    
