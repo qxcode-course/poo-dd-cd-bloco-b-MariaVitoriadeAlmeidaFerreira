@@ -19,4 +19,31 @@ class Watch:
     
     def setHour(self, valor:int):
         if valor < 0 or valor > 23:
-            print("fail")
+            print("fail: hora invalida")
+            return
+        self.__hour = valor 
+
+    def setMinute(self, valor: int):
+        if valor < 0 or valor > 59:
+            print("fail: minuto invalido")
+            return
+        self.__minute = valor
+    
+    def setSegundo(self, valor: int):
+        if valor < 0 or valor > 59:
+            print("fail: segundo invalido")
+            return 
+        self.__segundo = valor
+
+    def __str__(self) -> str:
+        hour = self.getHour()
+        minute = self.getMinute()
+        segundo = self.getSegundo()
+        return f"{hour:02}, {minute:02}, {segundo:02}"
+
+
+def main():
+watch = Watch
+
+
+
