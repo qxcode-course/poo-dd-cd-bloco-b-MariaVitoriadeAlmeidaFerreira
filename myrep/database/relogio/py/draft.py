@@ -39,7 +39,18 @@ class Watch:
         hour = self.getHour()
         minute = self.getMinute()
         segundo = self.getSegundo()
-        return f"{hour:02}, {minute:02}, {segundo:02}"
+        return f"{hour:02}:{minute:02}:{segundo:02}"
+    
+    def nextSegundo(self) -> None:
+        self.__segundo += 1
+        if self.__segundo >= 60:
+            self.__segundo = 0
+            self.__minute += 1
+        if self.__minute >= 60:
+            self.__minute = 0
+            self.__hour += 1
+        if self.__hour >= 24:
+            self.__hour = 0
 
 
 def main():
@@ -59,6 +70,8 @@ def main():
             relogio.setHour(int(args[1]))
             relogio.setMinute(int(args[2]))
             relogio.setSegundo(int(args[3]))
+        elif args[0] == "next":
+            relogio.nextSegundo()
         else:
             print("fail")
 
