@@ -27,3 +27,7 @@
 2025-10-12 09:16:02, MOVE, v:1, k:roupa, mode:PICK
 2025-10-12 09:16:25, EXEC, v:1, k:roupa, mode:FULL, rate:0, size:33
 2025-10-12 09:19:55, EXEC, v:1, k:roupa, mode:FULL, rate:0, size:33
+2025-10-12 09:22:27, MOVE, v:1, k:roupa, mode:PICK
+2025-10-12 09:22:28, EXEC, v:1, k:roupa, mode:FULL, rate:100
+2025-10-12 09:22:42, MOVE, v:1, k:roupa, mode:BACK
+2025-10-12 09:23:29, SELF, v:1, k:roupa, rate:100, study:2400
