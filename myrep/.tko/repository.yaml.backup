@@ -1,18 +1,26 @@
-remote: https://github.com/qxcodepoo/arcade/blob/master/Readme.md
-lang: py
-version: 0.0.1
-database: database
+version: '0.2'
+sources:
+- database: local
+  link: ''
+  cache_path: ''
+  cache_timestamp: ''
+  filters: null
+- database: poo
+  link: https://github.com/qxcodepoo/arcade/blob/master/Readme.md
+  cache_path: C:\Users\almei\OneDrive\Documentos\Estudos_vitoria\poo-dd-cd-bloco-b-MariaVitoriadeAlmeidaFerreira\myrep\.tko\cache\poo.md
+  cache_timestamp: '2025-10-20 13:55:06'
+  filters:
+  - acesso
+  - simples
 expanded:
-- configuracao-e-aquecimento
-- campanha-principal
-- bloco_b-modificadores-de-acesso
-tasks:
-  roupa: '{rate:100, study:2400}'
+- poo@campanha-principal
+- poo@bloco_b-agregação-simples
+tasks: {}
 flags:
   quests: 0
   tracks: 0
   tasks: 0
   graph: 0
   xray: 0
-index: relogio
-filter: []
+lang: py
+selected: poo@tamagotchi
