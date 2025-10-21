@@ -2,8 +2,13 @@
     "patches": [
         {
             "label": "2025-10-21_19-55-34",
-            "content": "class Person:\n    def __init__(self, name: str, age:int):\n        self.__name: str = name\n        self.__age: int = age\n\n\n    def getAge(self) -> int:\n        return self.__age\n\n    def getName(self) -> str:\n        return self.__name\n    \n    def __str__(self) -> str:\n        return f\"{self.__name}:{self.__age}\"\n    \nclass motinha:\n    def __init__(self, power:int = 1):\n        self.__person: Person | None \n        self.__power: int = power\n        self.__time: int = 0\n\n\n        ",
+            "content": "@@ -382,23 +382,22 @@\n  self.__\n-assento\n+person\n : Person\n@@ -404,22 +404,16 @@\n  %7C None \n-= None\n %0A       \n@@ -473,495 +473,8 @@\n  0%0A%0A\n-    def inserirPessoa(self, person: Person) -%3E bool:%0A        if self.__assento == None:%0A            self.__assento = person%0A            return True%0A        else:%0A            print(%22fail: busy motorcycle%22)%0A            return False%0A        %0A    def remover(self) -%3E Person %7C None:%0A        if self.__assento != None:%0A            aux = self.__assento %0A            self.__assento = None%0A            return aux%0A        else:%0A            print(%22fail: empty motorcycle%22)%0A            return None%0A\n %0A   \n",
             "lines": "23"
+        },
+        {
+            "label": "2025-10-21_20-21-10",
+            "content": "class Person:\n    def __init__(self, name: str, age:int):\n        self.__name: str = name\n        self.__age: int = age\n\n\n    def getAge(self) -> int:\n        return self.__age\n\n    def getName(self) -> str:\n        return self.__name\n    \n    def __str__(self) -> str:\n        return f\"{self.__name}:{self.__age}\"\n    \nclass motinha:\n    def __init__(self, power:int = 1):\n        self.__assento: Person | None = None\n        self.__power: int = power\n        self.__time: int = 0\n\n    def inserirPessoa(self, person: Person) -> bool:\n        if self.__assento == None:\n            self.__assento = person\n            return True\n        else:\n            print(\"fail: busy motorcycle\")\n            return False\n        \n    def remover(self) -> Person | None:\n        if self.__assento != None:\n            aux = self.__assento \n            self.__assento = None\n            return aux\n        else:\n            print(\"fail: empty motorcycle\")\n            return None\n\n        ",
+            "lines": "39"
         }
     ]
 }

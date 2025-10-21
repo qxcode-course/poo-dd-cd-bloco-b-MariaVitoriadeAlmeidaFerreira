@@ -36,4 +36,4 @@ class motinha:
             print("fail: empty motorcycle")
             return None
 
-        
+    def comprarTempo
