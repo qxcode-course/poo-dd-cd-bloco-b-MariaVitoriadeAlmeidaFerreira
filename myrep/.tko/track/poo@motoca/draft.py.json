@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-21_19-55-34",
+            "content": "class Person:\n    def __init__(self, name: str, age:int):\n        self.__name: str = name\n        self.__age: int = age\n\n\n    def getAge(self) -> int:\n        return self.__age\n\n    def getName(self) -> str:\n        return self.__name\n    \n    def __str__(self) -> str:\n        return f\"{self.__name}:{self.__age}\"\n    \nclass motinha:\n    def __init__(self, power:int = 1):\n        self.__person: Person | None \n        self.__power: int = power\n        self.__time: int = 0\n\n\n        ",
+            "lines": "23"
+        }
+    ]
+}
