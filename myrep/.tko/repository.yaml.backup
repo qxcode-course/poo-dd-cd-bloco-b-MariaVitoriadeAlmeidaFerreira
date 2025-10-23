@@ -8,7 +8,7 @@ sources:
 - database: poo
   link: https://github.com/qxcodepoo/arcade/blob/master/Readme.md
   cache_path: C:\Users\almei\OneDrive\Documentos\Estudos_vitoria\poo-dd-cd-bloco-b-MariaVitoriadeAlmeidaFerreira\myrep\.tko\cache\poo.md
-  cache_timestamp: '2025-10-21 19:55:20'
+  cache_timestamp: '2025-10-21 21:24:09'
   filters:
   - acesso
   - simples
