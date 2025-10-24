@@ -5,3 +5,9 @@
 2025-10-24 09:14:43, EXEC, v:1, k:poo@grafite, mode:FULL, rate:0, size:21
 2025-10-24 09:14:44, MOVE, v:1, k:poo@grafite, mode:BACK
 2025-10-24 09:14:46, MOVE, v:1, k:poo@grafite, mode:PICK
+2025-10-24 09:36:26, EXEC, v:1, k:poo@grafite, mode:FULL, rate:0, size:45
+2025-10-24 09:36:30, MOVE, v:1, k:poo@grafite, mode:BACK
+2025-10-24 09:37:06, SELF, v:1, k:poo@chinela, rate:100, alone:10, study:20
+2025-10-24 09:37:30, SELF, v:1, k:poo@relogio
+2025-10-24 09:37:39, SELF, v:1, k:poo@roupa, alone:10
+2025-10-24 09:37:52, MOVE, v:1, k:poo@grafite, mode:PICK
