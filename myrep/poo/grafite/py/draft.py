@@ -8,4 +8,15 @@ class Lead:
         return self.__thickness
     
     def getHardness(self):
-        return self
+        return self.__hardness
+    
+    def getSize(self):
+        return self.__size
+    
+    def setSize(self, size:int):
+        self.__size = size
+
+    def usageper
+    
+    def __str__(self):
+        return f"{self.__thickness}:{self.__hardness}: {self.__size}"

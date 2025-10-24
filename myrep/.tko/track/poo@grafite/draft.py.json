@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-24_09-14-43",
+            "content": "class Lead:\n    def __init__(self, thickness:float, hardness:str, size:int ):\n        self.__thickness = thickness\n        self.__hardness = hardness\n        self.__size = size\n\n    def getThickness(self):\n        return self.__thickness\n    \n    def getHardness(self):\n        return self.__hardness\n    \n    def getSize(self):\n        return self.__size\n    \n    def setSize(self, size:int):\n        self.__size = size\n\n    \n    def __str__(self):\n        return f\"{self.__thickness}: \"",
+            "lines": "21"
+        }
+    ]
+}

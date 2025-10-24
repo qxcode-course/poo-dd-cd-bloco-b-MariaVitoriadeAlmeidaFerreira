@@ -2,3 +2,6 @@
 2025-10-24 08:57:32, SELF, v:1, k:poo@notebook
 2025-10-24 08:57:53, SELF, v:1, k:poo@motoca, rate:100, alone:10, study:50
 2025-10-24 08:58:02, MOVE, v:1, k:poo@grafite, mode:PICK
+2025-10-24 09:14:43, EXEC, v:1, k:poo@grafite, mode:FULL, rate:0, size:21
+2025-10-24 09:14:44, MOVE, v:1, k:poo@grafite, mode:BACK
+2025-10-24 09:14:46, MOVE, v:1, k:poo@grafite, mode:PICK
