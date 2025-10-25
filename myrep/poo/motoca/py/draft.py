@@ -83,7 +83,7 @@ class motinha:
         return f"power:{self.__power}, time:{self.__time}, person:({aux})"
     
 def main():
-    moto = motinha()
+    moto = motinha | None = None
     while True:
         line: str = input()
         print("$" + line)

@@ -1,5 +1,5 @@
 class Grafite:
-    def __init__(self, calibre:float, hardness:str, size:int ):
+    def __init__ (self, calibre:float, hardness:str, size:int ):
         self.__calibre = calibre
         self.__hardness = hardness
         self.__size = size
@@ -17,13 +17,13 @@ class Grafite:
         self.__size = size
     
     def usagepersheet(self) -> int:
-        if self.__calibre == 'HB':
+        if self.__hardness == 'HB':
             return 1
-        elif self.__calibre == '2B':
+        elif self.__hardness == '2B':
             return 2
-        elif self.__calibre == "4B":
+        elif self.__hardness == "4B":
             return 4
-        elif self.__calibre == "6B":
+        elif self.__hardness == "6B":
             return 6
         return 0
     
@@ -54,26 +54,43 @@ class Pencil:
    
     def remove(self) -> Grafite | None:
         if self.HasGrafite():
-            self.__ponta = None
+           g = self.__ponta
+           self.__ponta = None
+           return g
         else:
             print("fail: nao existe grafite")
+            return g
 
     def writePage(self) -> None:
-        if self.HasGrafite():
-            grafite = self.__ponta
+        if self.HasGrafite() == False:
+            print("fail: tamanho insuficiente")
+            return
+        
+        gasto = self.__ponta.usagepersheet()
+            
 
     def __str__(self) -> str:
-        return f"calibre:{self.__calibre}: grafite:{self.__ponta}"
+        aux = ""
+        if self.__ponta != None:
+            aux = f"{self.__ponta}"
+        else:
+            aux = "null"
+        return f"calibre: {self.__calibre}, grafite: {aux}"
     
 
 def main():
-    pencil = Pencil(0)
+    pencil: Pencil | None = None
     while True:
-        line: str = input("")
+        line: str = input()
         print("$" + line)
         args: list[str] = line.split(" ")
-        
-
+        if args[0] == "exit":
+            break
+        elif args[0] == "show":
+            print(pencil)
+        elif args[0] == "init":
+            calibre = float(args[1])
+            pencil = Pencil(calibre)
 
 
 
