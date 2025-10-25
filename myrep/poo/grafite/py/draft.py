@@ -51,3 +51,30 @@ class Pencil:
             return False
         self.__ponta = grafite
         return True
+   
+    def remove(self) -> Grafite | None:
+        if self.HasGrafite():
+            self.__ponta = None
+        else:
+            print("fail: nao existe grafite")
+
+    def writePage(self) -> None:
+        if self.HasGrafite():
+            grafite = self.__ponta
+
+    def __str__(self) -> str:
+        return f"calibre:{self.__calibre}: grafite:{self.__ponta}"
+    
+
+def main():
+    pencil = Pencil(0)
+    while True:
+        line: str = input("")
+        print("$" + line)
+        args: list[str] = line.split(" ")
+        
+
+
+
+
+main()
