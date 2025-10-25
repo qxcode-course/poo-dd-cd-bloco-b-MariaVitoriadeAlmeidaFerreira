@@ -44,10 +44,10 @@ class Pencil:
 
     def insert(self, grafite: Grafite) -> bool:
         if self.HasGrafite():
-            print("fail: calibre incompativel")
-            return False
-        if grafite.getCalibre() != self.__calibre:
             print("fail: ja existe grafite")
+            return False
+        if grafite.getcalibre() != self.__calibre:
+            print("fail: calibre incompativel")
             return False
         self.__ponta = grafite
         return True
@@ -65,16 +65,16 @@ class Pencil:
         if self.HasGrafite() == False:
             print("fail: grafite nao existe")
             return
-        if self.__ponta.getSize():
-            print("fail: tamanho insuficinte")
-            return
-
         gasto = self.__ponta.usagepersheet()
         tam_A = self.__ponta.getSize()
+        
+        if tam_A < gasto:
+            print("fail: tamanho insuficiente")
+            return
 
         if tam_A - gasto < 10:
             self.__ponta.setSize(10)
-            print("fail: folha imcompleta")
+            print("fail: folha incompleta")
             return
         
         self.__ponta.setSize(tam_A - gasto)
@@ -96,7 +96,7 @@ def main():
         line: str = input()
         print("$" + line)
         args: list[str] = line.split(" ")
-        if args[0] == "exit":
+        if args[0] == "end":
             break
         elif args[0] == "show":
             print(pencil)
@@ -107,7 +107,7 @@ def main():
             if pencil:
                 print(pencil.remove())
             else:
-                print()
+                print("fail:")
 
 
 
