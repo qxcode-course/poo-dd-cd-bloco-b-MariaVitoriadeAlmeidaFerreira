@@ -22,6 +22,7 @@ tasks:
   poo@roupa: '{alone:10}'
   poo@relogio: '{alone:10, study:50}'
   poo@motoca: '{rate:100, alone:10, study:50}'
+  poo@grafite: '{rate:100, human:sim, alone:7, study:120}'
 flags:
   quests: 0
   tracks: 0

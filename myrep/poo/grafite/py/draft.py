@@ -28,7 +28,7 @@ class Grafite:
         return 0
     
     def __str__(self):
-        return f"{self.__calibre}:{self.__hardness}: {self.__size}"
+        return f"{self.__calibre}:{self.__hardness}:{self.__size}"
     
 class Pencil:
     def __init__(self, calibre: float):
@@ -40,7 +40,6 @@ class Pencil:
             return True
         else:
             return False
-        
 
     def insert(self, grafite: Grafite) -> bool:
         if self.HasGrafite():
@@ -63,12 +62,12 @@ class Pencil:
 
     def writePage(self) -> None:
         if self.HasGrafite() == False:
-            print("fail: grafite nao existe")
+            print("fail: nao existe grafite")
             return
+        
         gasto = self.__ponta.usagepersheet()
         tam_A = self.__ponta.getSize()
-        
-        if tam_A < gasto:
+        if self.__ponta.getSize() <= 10:
             print("fail: tamanho insuficiente")
             return
 
@@ -79,12 +78,10 @@ class Pencil:
         
         self.__ponta.setSize(tam_A - gasto)
 
-            
-
     def __str__(self) -> str:
         aux = ""
         if self.__ponta != None:
-            aux = f"{self.__ponta}"
+            aux = f"[{self.__ponta}]"
         else:
             aux = "null"
         return f"calibre: {self.__calibre}, grafite: {aux}"
@@ -105,9 +102,17 @@ def main():
             pencil = Pencil(calibre)
         elif args[0] == "remove":
             if pencil:
-                print(pencil.remove())
+                pencil.remove()
             else:
-                print("fail:")
+                print("fail: remover")
+        elif args[0] == "insert":
+            if not pencil:
+               print("fail")
+               continue
+            teste = Grafite(float(args[1]),(args[2]), int (args[3]))
+            pencil.insert(teste)
+        elif args[0] == "write":
+                pencil.writePage()
 
 
 
