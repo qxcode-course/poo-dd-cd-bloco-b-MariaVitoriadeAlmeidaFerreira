@@ -59,14 +59,26 @@ class Pencil:
            return g
         else:
             print("fail: nao existe grafite")
-            return g
+            return None
 
     def writePage(self) -> None:
         if self.HasGrafite() == False:
-            print("fail: tamanho insuficiente")
+            print("fail: grafite nao existe")
+            return
+        if self.__ponta.getSize():
+            print("fail: tamanho insuficinte")
+            return
+
+        gasto = self.__ponta.usagepersheet()
+        tam_A = self.__ponta.getSize()
+
+        if tam_A - gasto < 10:
+            self.__ponta.setSize(10)
+            print("fail: folha imcompleta")
             return
         
-        gasto = self.__ponta.usagepersheet()
+        self.__ponta.setSize(tam_A - gasto)
+
             
 
     def __str__(self) -> str:
@@ -91,6 +103,12 @@ def main():
         elif args[0] == "init":
             calibre = float(args[1])
             pencil = Pencil(calibre)
+        elif args[0] == "remove":
+            if pencil:
+                print(pencil.remove())
+            else:
+                print()
+
 
 
 
