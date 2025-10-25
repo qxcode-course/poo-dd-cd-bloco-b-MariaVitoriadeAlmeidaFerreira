@@ -79,7 +79,7 @@ ___
   - Teste: `if variavel is not null:`
 - Java
   - `null` é o valor padrão para ausência de valor.
-  - Tipos primitivos não podem ser null.
+  - pontaos primitivos não podem ser null.
   - Todos as referências a objetos podem ser null.
   - Referências não inicializadas são null.
   - `Integer variavel = null` - Define uma variável que pode ser `Integer` ou `null`.

@@ -63,7 +63,7 @@ Significado das tags nas questões:
 
 - [ ] `@array       :open`[Manipulações em Arrays](https://github.com/qxcodepoo/arcade/blob/master/base/array/Readme.md)
 - [ ] `@budega      :leet`[Gerencie a fila de espera e atendimento](https://github.com/qxcodepoo/arcade/blob/master/base/budega/Readme.md)
-- [ ] `@lapiseira   :leet`[Lapiseira com múltiplos grafites](https://github.com/qxcodepoo/arcade/blob/master/base/lapiseira/Readme.md)
+- [ ] `@lapiseira   :leet`[Lapiseira com múlpontalos grafites](https://github.com/qxcodepoo/arcade/blob/master/base/lapiseira/Readme.md)
 - [ ] `@tabuleiro   :leet`[Jogo de tabuleiro e armadilhas](https://github.com/qxcodepoo/arcade/blob/master/base/tabuleiro/Readme.md)
 - [ ] `@pula-pula   :leet`[Gerenciando entradas e saídas do pula pula](https://github.com/qxcodepoo/arcade/blob/master/base/pula-pula/Readme.md)
 

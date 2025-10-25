@@ -25,8 +25,8 @@ O objetivo dessa atividade é implementar uma lapiseira que permite inserir, rem
   - Se não houver grafite suficiente para terminar a escrita na folha, é emitido um aviso de texto incompleto.
 
 - Responsabilidades
-  - A classe Grafite `Lead` é responsável por armazenar as informações do grafite.
-    - `thickness` é a espessura e terá valores como 0.3, 0.5, 0.7.
+  - A classe Grafite `grafite` é responsável por armazenar as informações do grafite.
+    - `calibre` é a espessura e terá valores como 0.3, 0.5, 0.7.
     - `hardness` é a dureza e poderá ter os seguintes valores: `HB, 2B, 4B, 6B`.
     - O método `usagePerSheet` retorna a quantidade de grafite gasto por folha.
       - Um grafite `HB` gasta `1mm` por folha.
@@ -36,7 +36,7 @@ O objetivo dessa atividade é implementar uma lapiseira que permite inserir, rem
     - `size` representa o tamanho do grafite em `milímetros`.
   - A classe `Pencil` é responsável por gerenciar as operações de inserção, remoção de grafite e escrita na folha.
     - Ela referencia um único objeto lapiseira como atributo.
-    - E também possui um indicador de espessura `thickness`.
+    - E também possui um indicador de espessura `calibre`.
 - Comandos
   - Todos os comandos seguem o modelo `$comando arg1 arg2 ...`.
   - `$iniciar calibre` - Inicializa a lapiseira com um determinado calibre.
@@ -61,8 +61,8 @@ O objetivo dessa atividade é implementar uma lapiseira que permite inserir, rem
 [![youtube icon](https://raw.githubusercontent.com/qxcodepoo/arcade/master/base/grafite/../youguide.png)](https://youtu.be/DyhXHlM7Bv4?si=G05IiBLI15FrP6Bm)
 
 - Parte 1: Inserir
-  - Crie a classe Grafite `Lead` com o atributo tamanho `size`.
-  - Crie a classe Lapiseira `Pencil` com o atributo ponta `tip` inicializado como `null`.
+  - Crie a classe Grafite `grafite` com o atributo tamanho `size`.
+  - Crie a classe Lapiseira `Pencil` com o atributo ponta `ponta` inicializado como `null`.
   - Implemente o método tem grafite `hasGrafite` que retorna `true` se houver grafite na lapiseira.
   - Implemente o método inserir `insert` que insere um grafite na lapiseira, se não houver grafite.
   - Implemente o método `toString` que mostra a lapiseira e o grafite presente.

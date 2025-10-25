@@ -1,11 +1,11 @@
-class Lead:
-    def __init__(self, thickness:float, hardness:str, size:int ):
-        self.__thickness = thickness
+class Grafite:
+    def __init__(self, calibre:float, hardness:str, size:int ):
+        self.__calibre = calibre
         self.__hardness = hardness
         self.__size = size
 
-    def getThickness(self):
-        return self.__thickness
+    def getcalibre(self):
+        return self.__calibre
     
     def getHardness(self):
         return self.__hardness
@@ -16,33 +16,38 @@ class Lead:
     def setSize(self, size:int):
         self.__size = size
     
-    #sena pelo o amor de Deus que nome é esse
     def usagepersheet(self) -> int:
-        if self.__thickness == 'HB':
+        if self.__calibre == 'HB':
             return 1
-        elif self.__thickness == '2B':
+        elif self.__calibre == '2B':
             return 2
-        elif self.__thickness == "4B":
+        elif self.__calibre == "4B":
             return 4
-        elif self.__thickness == "6B":
+        elif self.__calibre == "6B":
             return 6
         return 0
     
     def __str__(self):
-        return f"{self.__thickness}:{self.__hardness}: {self.__size}"
+        return f"{self.__calibre}:{self.__hardness}: {self.__size}"
     
 class Pencil:
-    def __init__(self, thickness: float):
-        self.__thickness = thickness
-        self.__tip: Lead | None
+    def __init__(self, calibre: float):
+        self.__calibre = calibre
+        self.__ponta: Grafite | None = None
 
     def HasGrafite(self) -> bool:
-        if self.__tip != None:
+        if self.__ponta != None:
             return True
-
-    def insert(self, lead: Lead) -> bool:
-        if self.HasGrafite():
-            print("")
+        else:
             return False
-        self.__tip = lead
+        
+
+    def insert(self, grafite: Grafite) -> bool:
+        if self.HasGrafite():
+            print("fail: calibre incompativel")
+            return False
+        if grafite.getCalibre() != self.__calibre:
+            print("fail: ja existe grafite")
+            return False
+        self.__ponta = grafite
         return True

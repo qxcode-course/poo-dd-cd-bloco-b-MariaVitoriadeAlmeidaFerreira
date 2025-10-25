@@ -11,3 +11,8 @@
 2025-10-24 09:37:30, SELF, v:1, k:poo@relogio
 2025-10-24 09:37:39, SELF, v:1, k:poo@roupa, alone:10
 2025-10-24 09:37:52, MOVE, v:1, k:poo@grafite, mode:PICK
+2025-10-24 09:49:01, MOVE, v:1, k:poo@grafite, mode:BACK
+2025-10-24 10:02:08, SELF, v:1, k:poo@relogio, alone:10, study:50
+2025-10-24 10:02:21, SELF, v:1, k:poo@camisa, alone:10, study:30
+2025-10-24 10:02:34, MOVE, v:1, k:poo@grafite, mode:PICK
+2025-10-24 10:17:37, MOVE, v:1, k:poo@grafite, mode:BACK
