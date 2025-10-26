@@ -8,7 +8,7 @@ sources:
 - database: poo
   link: https://github.com/qxcodepoo/arcade/blob/master/Readme.md
   cache_path: C:\Users\almei\OneDrive\Documentos\Estudos_vitoria\poo-dd-cd-bloco-b-MariaVitoriadeAlmeidaFerreira\myrep\.tko\cache\poo.md
-  cache_timestamp: '2025-10-26 14:34:20'
+  cache_timestamp: '2025-10-26 16:07:06'
   filters:
   - acesso
   - simples
@@ -23,6 +23,7 @@ tasks:
   poo@relogio: '{alone:10, study:50}'
   poo@motoca: '{rate:100, alone:10, study:50}'
   poo@grafite: '{rate:100, human:sim, alone:7, study:120}'
+  poo@motouber: '{rate:50}'
 flags:
   quests: 0
   tracks: 0
