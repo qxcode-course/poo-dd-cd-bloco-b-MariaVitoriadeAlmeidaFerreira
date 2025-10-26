@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2025-10-26_14-51-03",
+            "content": "@@ -585,18 +585,16 @@\n , Driver\n-: \n %7Bself.__\n@@ -615,17 +615,16 @@\n ssenger:\n- \n %7Bself.__\n",
+            "lines": "37"
+        },
+        {
+            "label": "2025-10-26_14-51-20",
+            "content": "@@ -563,17 +563,16 @@\n  f%22Cost:\n- \n %7Bself.__\n",
+            "lines": "37"
+        },
+        {
+            "label": "2025-10-26_14-51-28",
+            "content": "@@ -510,137 +510,8 @@\n one%0A\n-%0A    def Driver(self, motorista: Pessoa) -%3E None:%0A        if self.__motorista == None:%0A            self.__motorista = motorista%0A%0A\n     \n@@ -890,99 +890,8 @@\n oto)\n-%0A        elif args%5B0%5D == %22setDriver%22:%0A            motorista = Pessoa(args%5B1%5D, int(args%5B2%5D))\n %0A%0Ama\n",
+            "lines": "37"
+        },
+        {
+            "label": "2025-10-26_15-14-09",
+            "content": "@@ -633,25 +633,16 @@\n otorista\n-%0A        \n %0A%0A    %0A \n@@ -1110,43 +1110,8 @@\n 2%5D))\n-%0A            moto.Driver(motorista)\n %0A%0Ama\n",
+            "lines": "44"
+        },
+        {
+            "label": "2025-10-26_15-39-04",
+            "content": "class Pessoa:\n    def __init__(self, nome:str, dinheiro:int):\n        self.__nome: str = nome\n        self.__dinheiro: int = dinheiro\n\n    def getNome(self) -> str:\n        return self.__nome\n    \n    def getDinheiro(self) -> int:\n        return self.__dinheiro\n    \n    def __str__(self) -> str:\n        return f\"{self.__nome}:{self.__dinheiro}\"\n    \nclass Moto:\n    def __init__(self):\n        self.__custo: int = 0\n        self.__motorista: Pessoa | None = None\n        self.__passageiro: Pessoa | None = None\n\n    def Driver(self, motorista: Pessoa) -> None:\n        if self.__motorista == None:\n            self.__motorista = motorista\n        \n\n    \n    def __str__(self) -> str:\n        return f\"Cost: {self.__custo}, Driver: {self.__motorista}, Passenger: {self.__passageiro}\"\n\ndef main():\n    moto = Moto()\n    while True:\n        line: str = input()\n        print(\"$\" + line)\n        args: list[str]  = line.split(\" \")\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"show\":\n            print(moto)\n        elif args[0] == \"setDriver\":\n            motorista = Pessoa(args[1], int(args[2]))\n            moto.Driver(motorista)\n\nmain()\n\n    ",
+            "lines": "46"
+        }
+    ]
+}
