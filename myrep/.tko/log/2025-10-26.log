@@ -22,3 +22,5 @@
 2025-10-26 16:56:22, EXEC, v:1, k:poo@motouber, mode:FULL, rate:87, size:78
 2025-10-26 17:01:33, EXEC, v:1, k:poo@motouber, mode:FULL, rate:87, size:83
 2025-10-26 17:11:33, EXEC, v:1, k:poo@motouber, mode:FULL, rate:100, size:85
+2025-10-26 17:12:42, MOVE, v:1, k:poo@motouber, mode:BACK
+2025-10-26 17:14:28, SELF, v:1, k:poo@motouber, rate:100, human:namorado, alone:9, study:180
