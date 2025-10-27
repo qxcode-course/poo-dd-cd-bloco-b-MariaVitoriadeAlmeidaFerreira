@@ -2,8 +2,38 @@
     "patches": [
         {
             "label": "2025-10-27_14-08-45",
-            "content": "class Notebook:\n    def __init__(self)",
+            "content": "@@ -35,1182 +35,4 @@\n elf)\n-:%0A        self.__ligado: bool = False%0A        self.__bateria: Bateria %7C None%0A%0A    def getLigado(self) -%3E bool:%0A        return self.__ligado%0A    %0A    def setBateria(self, bateria):%0A        self.__bateria = bateria%0A    %0A    def __ste__(self) -%3E str:%0A        saida = %22%22%0A        saida += f%22Notebook:%7B%22ligado%22 if self.__ligado else %22desligado%22%7D%22%0A        if self.__bateria != None:%0A            saida += f%22Bateria: %7Bself.__bateria%7D%22%0A        else:%0A            saida += f%22Bateria: nao conectada%22%0A%0A        return saida%0A    %0Aclass Bateria:%0A    def __init__(self, capacidade):%0A        self.__capacidade: int = capacidade%0A        self.__carga: int = capacidade%0A %0A    def getCapacidade(self) -%3E int:%0A        return self.__capacidade%0A    %0A    def getCaega(self) -%3E int:%0A        return self.__carga%0A%0A    def __str__(self) -%3E str:%0A        return f%22bateria: %7Bself.__capacidade%7D:%7Bself.__carga%7D%22%0A    %0A    def main():%0A        notebook = Notebook()%0A        while True:%0A            line: str = input()%0A            print(%22$%22 + line)%0A            args: list%5Bstr%5D  = line.split(%22 %22)%0A            if args%5B0%5D == %22end%22:%0A                break%0A            elif args%5B0%5D == %22show%22:%0A                print(notebook)\n",
             "lines": "2"
+        },
+        {
+            "label": "2025-10-27_14-47-49",
+            "content": "@@ -253,33 +253,33 @@\n    %0A    def __st\n-r\n+e\n __(self) -%3E str:\n",
+            "lines": "45"
+        },
+        {
+            "label": "2025-10-27_14-50-38",
+            "content": "@@ -768,17 +768,17 @@\n ef getCa\n-r\n+e\n ga(self)\n@@ -912,16 +912,20 @@\n %7D%22%0A    %0A\n+    \n def main\n@@ -1213,12 +1213,4 @@\n ook)\n-%0A%0Amain()\n",
+            "lines": "45"
+        },
+        {
+            "label": "2025-10-27_14-51-43",
+            "content": "@@ -111,15 +111,8 @@\n None\n- = None\n %0A%0A  \n@@ -291,17 +291,48 @@\n     \n-estado = \n+saida = %22%22%0A        saida += f%22Notebook:%7B\n %22lig\n@@ -373,44 +373,8 @@\n ado%22\n-%0A        saida = f%22Notebook: %7Bestado\n %7D%22%0A \n",
+            "lines": "47"
+        },
+        {
+            "label": "2025-10-27_14-55-24",
+            "content": "@@ -118,60 +118,8 @@\n None\n-%0A        self.__carregador: Carregador %7C None = None\n %0A%0A  \n@@ -254,89 +254,8 @@\n eria\n-%0A%0A    def setCarregador(self, carregador):%0A        self.__carregador = carregador\n %0A   \n@@ -903,17 +903,16 @@\n cidade%7D:\n- \n %7Bself.__\n@@ -928,273 +928,49 @@\n    %0A\n-class Carregador:%0A    def __init__(self, potencia):%0A        self.__potencia: int = potencia%0A%0A    def getPotencia(self):%0A        return self.__potencia%0A    %0Adef main():%0A        notebook = Notebook()%0A        bateria = Bateria(50)%0A        notebook.setBateria(bateria)%0A\n+def main():%0A        notebook = Notebook()\n %0A   \n",
+            "lines": "47"
+        },
+        {
+            "label": "2025-10-27_15-06-08",
+            "content": "@@ -477,18 +477,16 @@\n esligado\n-%5Cn\n %22%0A      \n@@ -600,18 +600,16 @@\n bateria%7D\n-%5Cn\n %22%0A      \n@@ -1055,10 +1055,8 @@\n rga%7D\n-%5Cn\n %22%0A  \n",
+            "lines": "61"
+        },
+        {
+            "label": "2025-10-27_15-07-22",
+            "content": "class Notebook:\n    def __init__(self):\n        self.__ligado: bool = False\n        self.__bateria: Bateria | None = None\n        self.__carregador: Carregador | None = None\n\n    def getLigado(self) -> bool:\n        return self.__ligado\n    \n    def setBateria(self, bateria):\n        self.__bateria = bateria\n\n    def setCarregador(self, carregador):\n        self.__carregador = carregador\n    \n    def __str__(self) -> str:\n        estado = \"ligado\" if self.__ligado else \"desligado\\n\"\n        saida = f\"Notebook: {estado}\"\n        if self.__bateria != None:\n            saida += f\"Bateria: {self.__bateria}\\n\"\n        else:\n            saida += f\"Bateria: nao conectada\"\n\n        return saida\n    \nclass Bateria:\n    def __init__(self, capacidade):\n        self.__capacidade: int = capacidade\n        self.__carga: int = capacidade\n \n    def getCapacidade(self) -> int:\n        return self.__capacidade\n    \n    def getCarga(self) -> int:\n        return self.__carga\n\n    def __str__(self) -> str:\n        return f\"bateria: {self.__capacidade}: {self.__carga}\\n\"\n    \nclass Carregador:\n    def __init__(self, potencia):\n        self.__potencia: int = potencia\n\n    def getPotencia(self):\n        return self.__potencia\n    \ndef main():\n        notebook = Notebook()\n        bateria = Bateria(50)\n        notebook.setBateria(bateria)\n\n        while True:\n            line: str = input()\n            print(\"$\" + line)\n            args: list[str]  = line.split(\" \")\n            if args[0] == \"end\":\n                break\n            elif args[0] == \"show\":\n                print(notebook)\n\nmain()",
+            "lines": "61"
         }
     ]
 }
