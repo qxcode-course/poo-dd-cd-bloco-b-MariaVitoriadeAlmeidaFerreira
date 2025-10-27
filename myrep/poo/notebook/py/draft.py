@@ -16,7 +16,7 @@ class Notebook:
     def ligar(self):
         if self.__ligado:
             return
-        if self.__carregador != None or (self.__bateria != None and self.__bateria.getCarga() > 0):
+        if self.__carregador or (self.__bateria and self.__bateria.getCarga() > 0):
             self.__ligado = True
             print("Notebook esta ligado")
         else:
@@ -31,7 +31,7 @@ class Notebook:
         if self.__bateria:
             temp = self.__bateria
             self.__bateria = None
-            print("fail: bateria removida")
+            print("bateria removida")
             return temp
         return None
         
@@ -39,7 +39,7 @@ class Notebook:
         if self.__carregador:
             temp = self.__carregador 
             self.__carregador = None
-            print("fail: carregador removido")
+            print("carregador removido")
             return temp
         return None
 
@@ -50,6 +50,7 @@ class Notebook:
             print("fail: sem bateria e sem carregador")
             return      
         if self.__carregador:
+
             carga = self.__bateria.setCarga()
             if carga <= 0:
                 print("carga vazia")
@@ -110,9 +111,7 @@ def main():
         notebook = Notebook()
         bateria = Bateria(50)
         carregador = Carregador(3)
-        notebook.setBateria(bateria)
-        notebook.setCarregador(carregador)
-
+        
         while True:
             line: str = input()
             print("$" + line)
@@ -121,6 +120,20 @@ def main():
                 break
             elif args[0] == "show":
                 print(notebook)
-            elif args
+            elif args[0] == "ligar":
+                notebook.ligar()
+            elif args[0] == "desligar":
+                notebook.desligar()
+            elif args[0] == "rmBateria":
+                notebook.rmBateria()
+            elif args[0] == "rmCarregador":
+                notebook.rmCarregador()
+            elif args[0] == "setCarregador":
+                potencia = int(args[1])
+                carregador = Carregador(potencia)
+                notebook.setCarregador(carregador)
+
+
+
 
 main()
